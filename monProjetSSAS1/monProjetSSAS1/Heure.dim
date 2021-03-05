@@ -1,0 +1,795 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="547ef3da-6760-4173-a391-3077992dc273" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Heure</ID>
+  <Name>Heure</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="TimeBinding" dwd:design-time-name="cd21b757-9b2b-4270-b4d3-d59577ba2b23">
+    <CalendarStartDate>2017-12-31T23:00:00Z</CalendarStartDate>
+    <CalendarEndDate>2021-12-30T23:00:00Z</CalendarEndDate>
+  </Source>
+  <Type>Time</Type>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="8370e3eb-2ae8-4bae-8b4c-4a6bf1fc3499">
+      <ID>Date</ID>
+      <Name>Date</Name>
+      <Type>Days</Type>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d1b85f6f-ce95-4030-b00f-4a8ed32c4b09">
+          <DataType>Date</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="436e69b7-5a32-4ac1-a73b-9818813b0463" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="e7643c45-537d-4c9a-b8fb-c3d149613d9a">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="f6e33900-1b9f-4290-914a-e9083ccbc0bb">
+          <AttributeID>Décade</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Décade</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6533bfda-3c21-4716-bf23-8631e421bb5b">
+          <AttributeID>Décade De lannée</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Décade De lannée</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="93f9533c-6393-4b5d-8e15-b29472e5932e">
+          <AttributeID>Décade Du Semestre</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Décade Du Semestre</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="63a63126-692f-41ee-b040-4b2ffccd4853">
+          <AttributeID>Décade Du Quadrimestre</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Décade Du Quadrimestre</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1d11ce81-203d-4c0e-aed6-c24d22362313">
+          <AttributeID>Décade Du Trimestre</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Décade Du Trimestre</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="38eb30a5-5d54-4adc-8716-3f26a9db5c9b">
+          <AttributeID>Décade Du Mois</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Décade Du Mois</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="723a471e-8c4c-4ce1-95d1-d18242c929cb">
+          <AttributeID>Semaine</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Semaine</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c7bea7b1-85eb-47c9-858e-9b64ac18fb27">
+          <AttributeID>Semaine De lannée</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Semaine De lannée</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="374b6ce8-3df3-44f0-b1ca-4af64dd282c8">
+          <AttributeID>Jour De lannée</AttributeID>
+          <Name>Jour De lannée</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="aae80fab-d6bb-443b-8661-10c2be3a5405">
+          <AttributeID>Jour Du Semestre</AttributeID>
+          <Name>Jour Du Semestre</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3a1b4e1b-6b88-4487-b1fa-a48643024e5e">
+          <AttributeID>Jour Du Quadrimestre</AttributeID>
+          <Name>Jour Du Quadrimestre</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c5726abe-f9a3-42e6-8d7d-4fb5fb54ad4e">
+          <AttributeID>Jour Du Trimestre</AttributeID>
+          <Name>Jour Du Trimestre</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e4068b27-0237-443e-848c-139a16bb8615">
+          <AttributeID>Jour Du Mois</AttributeID>
+          <Name>Jour Du Mois</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="393e7bea-40c7-4ba4-893a-dcb9094a9f53">
+          <AttributeID>Jour De La Décade</AttributeID>
+          <Name>Jour De La Décade</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4eedbb5d-ed10-47d0-84cd-170920a2ef8e">
+          <AttributeID>Jour De La Semaine</AttributeID>
+          <Name>Jour De La Semaine</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c1de84e2-ab26-44d4-bad1-dc200f89d538">
+      <ID>Année</ID>
+      <Name>Année</Name>
+      <Type>Years</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="453c8e27-f4e5-47b8-b222-ad98f048ef55">
+          <DataType>Date</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="b74c3dcd-3916-4e78-a0ce-1ef6db8af193" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="781248a5-f21a-4de0-ab60-401de170b60e">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="75b0311c-51e1-4b3b-8978-04640fa6a939">
+      <ID>Semestre</ID>
+      <Name>Semestre</Name>
+      <Type>HalfYears</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7e379cbf-67ee-46a7-b806-9f12b41c95df">
+          <DataType>Date</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="2c0b97c0-4382-4010-82af-9b58a49968f2" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="15f8209b-cb44-4d5b-a72d-7a54bf569d95">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="348ebc14-9708-4069-88e3-7635061d60b3">
+          <AttributeID>Année</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Année</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e7cb5f14-b0f1-4437-8e1a-fddeb27a37a3">
+      <ID>Trimestre</ID>
+      <Name>Trimestre</Name>
+      <Type>Quarters</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="564ad768-ed9a-4cd2-9dc5-1e3e46298c38">
+          <DataType>Date</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="12050828-4d35-4712-8b46-a24f982bbd00" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="0b96562c-d1db-46e1-9c4d-59f4f30fb858">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="389e0581-be13-458a-8d58-5b365af66b80">
+          <AttributeID>Semestre</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Semestre</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0c1ef1e7-7f3f-44fd-94bb-fd9b3ce61c1a">
+          <AttributeID>Semestre De lannée</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Semestre De lannée</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="71bd0bf7-1cff-4c54-980b-41e941dfad06">
+      <ID>Quadrimestre</ID>
+      <Name>Quadrimestre</Name>
+      <Type>Trimesters</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="51cf7287-d8a8-4eb0-bae2-e4cc499289d6">
+          <DataType>Date</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="9cc97f28-e645-443f-9ef1-87bbbfde46f5" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="ba3cad9c-6558-4237-9308-bf5b786d6d73">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="12f0ed6b-daf4-45cc-826a-09dfa5441637">
+          <AttributeID>Année</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Année</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="fd4690d0-67de-40f7-bfd3-a12857be147b">
+      <ID>Mois</ID>
+      <Name>Mois</Name>
+      <Type>Months</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="89e78b6c-9e3c-4815-9e8b-2b6a3238b691">
+          <DataType>Date</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="7f2d0376-57ee-4aed-8d2a-4d6a8f430b93" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="75978d6d-339f-48cd-9b6f-38a5bac35c51">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="4a44b9f2-1e33-4548-a51e-1601c219d54c">
+          <AttributeID>Trimestre</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Trimestre</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="82f4d86f-58ce-4bc2-8110-b29c1bbcac6f">
+          <AttributeID>Trimestre De lannée</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Trimestre De lannée</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e088abcc-621d-4207-8b98-dc99ead9ddcd">
+          <AttributeID>Trimestre Du Semestre</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Trimestre Du Semestre</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="081ed209-be35-459d-be27-bf311da36d90">
+          <AttributeID>Quadrimestre</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Quadrimestre</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f4bf7a59-417c-4909-82dd-370656b7563b">
+          <AttributeID>Quadrimestre De lannée</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Quadrimestre De lannée</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c04309ef-d446-48d1-b105-30d513aed9c0">
+      <ID>Décade</ID>
+      <Name>Décade</Name>
+      <Type>TenDays</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="701db1a0-2727-495d-8d7e-1058468e7b67">
+          <DataType>Date</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="cfb8fc92-3711-4a1b-b362-c30072d0b295" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="97ee9967-77f9-4c9d-9957-8ece9a191e0f">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="15f232f1-bc1a-4cb5-8b14-96a4a29ea52b">
+          <AttributeID>Mois</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Mois</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="50832daa-cb2c-4a1d-9a0c-51e56d8245d7">
+          <AttributeID>Mois De lannée</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Mois De lannée</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="433107e4-4ec6-40dd-ac55-a6e6a15d2318">
+          <AttributeID>Mois Du Semestre</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Mois Du Semestre</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="14bdd0cf-5cc0-4082-a120-a10fbef536fa">
+          <AttributeID>Mois Du Quadrimestre</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Mois Du Quadrimestre</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0f28f250-c762-46ae-94ea-1cc08586b27d">
+          <AttributeID>Mois Du Trimestre</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Mois Du Trimestre</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="75475142-21db-4438-b032-7eb00ef420d0">
+      <ID>Semaine</ID>
+      <Name>Semaine</Name>
+      <Type>Weeks</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a7b1518b-055a-482e-a228-692db28ceb18">
+          <DataType>Date</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="e71a75cf-2d5b-400c-b247-86a2ce606521" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="c221fd4d-8bac-4857-a335-139a76913d01">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="5eff1ed7-9c95-4df3-b918-82f0cb0ec87f">
+          <AttributeID>Année</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Année</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="964da3ee-b511-429f-a65f-185faacc2b17">
+      <ID>Jour De lannée</ID>
+      <Name>Jour De lannée</Name>
+      <Type>DayOfYear</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2357eee2-a3a7-414e-843b-68d8014fc73e">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="95fcfc82-ffd4-4121-bf5f-a2f0c1403c96" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="ba4a8756-3ca1-4b27-9a71-0366d743718b">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="02bb8312-188a-4f77-bb5f-13b617470ccf">
+      <ID>Jour Du Semestre</ID>
+      <Name>Jour Du Semestre</Name>
+      <Type>DayOfHalfYear</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="85f78ca2-3d5f-4354-a488-504694e46d6b">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="9e4be811-4db2-4ec5-93d5-815729d3ca79" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="7e2d9dd4-9e1c-4764-bc90-a85451cf5c50">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="59fcf3a3-56f1-44e2-9ec7-bd618a8dda16">
+      <ID>Jour Du Quadrimestre</ID>
+      <Name>Jour Du Quadrimestre</Name>
+      <Type>DayOfTrimester</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e038413f-18ef-4501-8591-271e6153ed3c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="8461146e-075e-449b-9404-a0c69691de77" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="cb6d7176-ca64-4f03-bb59-4e5bddab3c89">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="72290d40-7e7b-4931-89c0-9f83bc3bdeb8">
+      <ID>Jour Du Trimestre</ID>
+      <Name>Jour Du Trimestre</Name>
+      <Type>DayOfQuarter</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4edfbfd0-3108-472f-a51d-99653254ac43">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="a028a148-c35a-4c3b-86d0-aa307e119248" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="465d8a36-6de7-40ae-8b94-a641e9bfc6f4">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a2d30685-040b-4eba-9260-208d8c582668">
+      <ID>Jour Du Mois</ID>
+      <Name>Jour Du Mois</Name>
+      <Type>DayOfMonth</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bcdb542c-020e-4b64-9d23-23d03749e7a8">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="6a76bec8-31c1-4f1d-aca5-4fb91857bbac" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="8acf175e-2abf-4843-9a2e-701a0653b6d7">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="04196dc4-2d4e-406d-8f5f-b930a108fd36">
+      <ID>Jour De La Décade</ID>
+      <Name>Jour De La Décade</Name>
+      <Type>DayOfTenDays</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7984d4f3-d800-46bf-abb8-0c64b9f5d1dd">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="a8613474-7028-4def-a14b-2d02605b3fd9" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="1374e6db-354c-4b6b-9ac6-dbfd8ac80dce">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="28c7d049-491e-47a4-ae49-86f9a068ac87">
+      <ID>Jour De La Semaine</ID>
+      <Name>Jour De La Semaine</Name>
+      <Type>DayOfWeek</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5d12d2c2-b02e-48c1-aa36-e67ffc1910f6">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="ca4eadd4-80e8-4f4f-beb1-0f95d0e36136" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="b5e7c732-5d1c-4549-ac9a-a58f8c4018ba">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e07ccc7a-9ebc-4bde-8520-6e7921181d1d">
+      <ID>Semaine De lannée</ID>
+      <Name>Semaine De lannée</Name>
+      <Type>WeekOfYear</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c674d6e8-59d2-43ef-bfe8-1bf5c8d79c70">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="1a3780a9-84e7-4ffc-8c4c-b9c76421afe8" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="45f011ac-29db-40a6-8ac8-7893541ff9dc">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6e77c387-c972-4791-af6c-0194c6d4a484">
+      <ID>Décade De lannée</ID>
+      <Name>Décade De lannée</Name>
+      <Type>TenDayOfYear</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d1af255d-86ff-4987-aa74-6d7ecdaa3e41">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="30553a6e-5dee-4595-9ae9-f994b9a381ed" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="83715d5d-da09-4b5e-89ae-83e1af79b7ef">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1e3c4553-44a1-4060-af1f-092442589553">
+      <ID>Décade Du Semestre</ID>
+      <Name>Décade Du Semestre</Name>
+      <Type>TenDayOfHalfYear</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1ef68499-60ab-49d5-ab33-7c84a85a54d1">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="aacdc77f-114f-49f1-9edb-f8de16a37e52" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="59642a4a-79d8-45aa-9664-d51a829fd02c">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="83eb761d-954c-4b54-932a-0aeabc0525b5">
+      <ID>Décade Du Quadrimestre</ID>
+      <Name>Décade Du Quadrimestre</Name>
+      <Type>TenDayOfTrimester</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9af54174-c759-4321-925f-a1bf3b452a90">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="962a1ac3-50e1-4da4-810c-ae325d5b76ce" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="2f715c65-6d1c-4792-a8de-ae971488cfc6">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="58caf903-a1da-4cc4-8eb6-9909597c4fde">
+      <ID>Décade Du Trimestre</ID>
+      <Name>Décade Du Trimestre</Name>
+      <Type>TenDayOfQuarter</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ff9ffff7-5b4f-46dc-9fff-10b5371cfa01">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="cc4a3b4c-9e11-49cf-89b8-5a22ea4ae151" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="63148a88-2f4e-4759-8d12-d2af8595d127">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a20b90df-dda7-4d4e-a408-91897c0fc67a">
+      <ID>Décade Du Mois</ID>
+      <Name>Décade Du Mois</Name>
+      <Type>TenDayOfMonth</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9541ccc6-c29e-493a-8631-14ec556a440f">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="ef24d872-6287-42ff-b182-d463eec6f0d1" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="6cf7b7c2-f473-4428-90ec-59c253091087">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="65ede50c-f3e9-4ed9-8649-2e0bc2d77725">
+      <ID>Mois De lannée</ID>
+      <Name>Mois De lannée</Name>
+      <Type>MonthOfYear</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9459d874-0e80-451c-8711-608aa3a28a07">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="183e8cef-5e08-4671-bfa8-9f3ae8502fba" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="ddf5f056-2fbe-4526-aaa1-c3d436164a37">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="57cb5567-5ecc-4448-b25c-119e619342f8">
+      <ID>Mois Du Semestre</ID>
+      <Name>Mois Du Semestre</Name>
+      <Type>MonthOfHalfYear</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="92eb6527-8d2e-4523-ac2b-589abe1b7d21">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="d84b9972-65c7-4004-a8e0-691c1b91f328" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="1ad7c9ce-e35d-446b-91b9-fc7c3e88c66d">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="805cca69-801a-4473-aa17-f925ecd350f1">
+      <ID>Mois Du Quadrimestre</ID>
+      <Name>Mois Du Quadrimestre</Name>
+      <Type>MonthOfTrimester</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5dce96f0-216a-4daa-99d9-a8a17c1ad8f1">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="5fd57ed5-35ed-4301-91d8-9c93503daa9a" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="29d65ccd-b3b8-4f4a-9ce5-bd941e9818f7">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7304ce69-c215-4167-9067-85d505a348c7">
+      <ID>Mois Du Trimestre</ID>
+      <Name>Mois Du Trimestre</Name>
+      <Type>MonthOfQuarter</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2c477c87-f7de-4130-84b4-dbc5674137a5">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="553b353e-44b6-49e6-b171-665143cbc8b6" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="d09e4e17-881b-4376-9bae-0a86d6bdbf59">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8a0d5ca6-3ae9-40f1-923e-59c7cf1b7fe9">
+      <ID>Trimestre De lannée</ID>
+      <Name>Trimestre De lannée</Name>
+      <Type>QuarterOfYear</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2bfdab11-fa3a-4280-a5f2-6e3888f0c69a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="3b598f66-9e47-4c22-9a43-bc96bb3d04eb" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="eed9ef76-dec6-4845-be80-135c52a0553c">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="71553535-84ac-43d7-a299-3399a4ca9402">
+      <ID>Trimestre Du Semestre</ID>
+      <Name>Trimestre Du Semestre</Name>
+      <Type>QuarterOfHalfYear</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="69cc7600-c820-4a8e-ade4-88542096e03d">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="b04c0e4d-2c3b-495d-a463-c9436cf237a8" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="a2916b89-69ec-4f89-be04-58e08b2a582b">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="831f8c54-eae3-4f3d-8ed8-87defa1c12b6">
+      <ID>Quadrimestre De lannée</ID>
+      <Name>Quadrimestre De lannée</Name>
+      <Type>TrimesterOfYear</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6caa8d4f-4678-4b36-8dfd-aeef05339e07">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="8b6c96d4-6ec5-48b5-8f23-780453f0c49f" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="5e025b8e-2907-4fa9-ac76-68c58c0020f3">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="231a688f-7459-4db0-b274-8f94a4474269">
+      <ID>Semestre De lannée</ID>
+      <Name>Semestre De lannée</Name>
+      <Type>HalfYearOfYear</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e81e693c-a79b-4073-b7a2-982bf1965768">
+          <DataType>Integer</DataType>
+          <Source xsi:type="TimeAttributeBinding" dwd:design-time-name="b0ee0031-c723-4d13-a08d-878db251c149" />
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="fe1f3654-80ee-45f9-884e-ebe0a1a3097b">
+        <DataType>WChar</DataType>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="21820fdf-ea72-47eb-a244-90ae3f725106">
+      <ID>Année -  Semestre -  Trimestre -  Mois -  Décade -  Date</ID>
+      <Name>Année -  Semestre -  Trimestre -  Mois -  Décade -  Date</Name>
+      <Levels>
+        <Level dwd:design-time-name="4f257208-b4c4-4b3a-9231-3a5909c5f3d0">
+          <ID>Année</ID>
+          <Name>Année</Name>
+          <SourceAttributeID>Année</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="efd4af8b-387c-4d30-b3c6-ea84a8557a39">
+          <ID>Semestre</ID>
+          <Name>Semestre</Name>
+          <SourceAttributeID>Semestre</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="f032fa73-3617-4766-9b21-e805c2a625c2">
+          <ID>Trimestre</ID>
+          <Name>Trimestre</Name>
+          <SourceAttributeID>Trimestre</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="95de6410-50fb-4354-81b9-1c11291dd178">
+          <ID>Mois</ID>
+          <Name>Mois</Name>
+          <SourceAttributeID>Mois</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="f2f6adad-2b0a-4557-b385-4dc97a0fd994">
+          <ID>Décade</ID>
+          <Name>Décade</Name>
+          <SourceAttributeID>Décade</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="bbe3c40a-f83e-4cde-aefe-133338b3eb49">
+          <ID>Date</ID>
+          <Name>Date</Name>
+          <SourceAttributeID>Date</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="5ca3d407-3212-4f13-910a-e12cd9e34d8d">
+      <ID>Année -  Quadrimestre -  Mois -  Décade -  Date</ID>
+      <Name>Année -  Quadrimestre -  Mois -  Décade -  Date</Name>
+      <Levels>
+        <Level dwd:design-time-name="a398cf9a-bae7-4f0d-b060-ba520b507ce0">
+          <ID>Année</ID>
+          <Name>Année</Name>
+          <SourceAttributeID>Année</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="9111fdb1-2d2f-4b58-98f9-fceabb501115">
+          <ID>Quadrimestre</ID>
+          <Name>Quadrimestre</Name>
+          <SourceAttributeID>Quadrimestre</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="64b11a7e-ef6f-4d53-9510-50e882559320">
+          <ID>Mois</ID>
+          <Name>Mois</Name>
+          <SourceAttributeID>Mois</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="0f915ddc-894d-447e-82eb-42487351b973">
+          <ID>Décade</ID>
+          <Name>Décade</Name>
+          <SourceAttributeID>Décade</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="4b328da9-60a3-4a1b-b715-b320289e7e4a">
+          <ID>Date</ID>
+          <Name>Date</Name>
+          <SourceAttributeID>Date</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="cb7e0cd1-bfc0-4238-941b-339085147e51">
+      <ID>Année -  Semaine -  Date</ID>
+      <Name>Année -  Semaine -  Date</Name>
+      <Levels>
+        <Level dwd:design-time-name="8c24a699-ceb7-484a-9d09-a2d486d62c75">
+          <ID>Année</ID>
+          <Name>Année</Name>
+          <SourceAttributeID>Année</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="13dc2845-a319-4284-8d8a-1290e2761666">
+          <ID>Semaine</ID>
+          <Name>Semaine</Name>
+          <SourceAttributeID>Semaine</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="af2ead23-1a87-4432-b654-a447efba6ba4">
+          <ID>Date</ID>
+          <Name>Date</Name>
+          <SourceAttributeID>Date</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
